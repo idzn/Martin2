@@ -11,6 +11,7 @@ class MainController extends Controller
 {
     public function action_index()
     {
+        Components::runtime()->pageTitle = 'basic/main/index';
         return $this->render('main/index', ['data' => 'basic/main/index']);
     }
 } 

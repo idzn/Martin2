@@ -102,7 +102,7 @@ class Application
 
             foreach ($modulesDir as $dir) {
                 if ($dir == $requestInfo['module']) {
-                    $moduleConfig = require MODULES_PATH . DIRECTORY_SEPARATOR . $requestInfo['module'] . '/boot.php';
+                    $moduleConfig = require MODULES_PATH . DIRECTORY_SEPARATOR . $requestInfo['module'] . '/map.php';
                     $this->config = array_replace_recursive($this->config, $moduleConfig);
                 }
             }
