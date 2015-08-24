@@ -14,4 +14,10 @@ class MainController extends Controller
         Components::runtime()->pageTitle = 'basic/main/index';
         return $this->render('main/index', ['data' => 'basic/main/index']);
     }
+
+    public function action_about()
+    {
+        Components::runtime()->pageTitle = 'About';
+        return $this->render();
+    }
 } 

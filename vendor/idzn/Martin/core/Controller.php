@@ -40,6 +40,7 @@ class Controller
 
     public function render($view, $data = [])
     {
+        if ($view === null) $view = Components::runtime()->controllerName . '/' . Components::runtime()->actionName;
         $viewNamespacedClass = '\\' . Components::runtime()->moduleName . '\\extended\\' . 'View';
         ob_start();
         echo (new $viewNamespacedClass)->render($view, $data);
@@ -72,6 +73,7 @@ class Controller
 
     public function renderPartial($view, $data = [])
     {
+        if ($view === null) $view = Components::runtime()->controllerName . '/' . Components::runtime()->actionName;
         $viewNamespacedClass = '\\' . Components::runtime()->moduleName . '\\extended\\' . 'View';
         ob_start();
         echo (new $viewNamespacedClass())->render($view, $data);

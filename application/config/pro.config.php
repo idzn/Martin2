@@ -17,6 +17,7 @@ return [
     'routing' => [
         'routes' => [
             'home' => ['get', '/', 'basic/main/index'],
+            'about' => ['get', '/about', 'basic/main/about'],
             'admin_home' => ['get', '/admin', 'admin/main/index'],
         ],
         'patterns' => [
